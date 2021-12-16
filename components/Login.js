@@ -1,12 +1,13 @@
 import Image from "next/image";
-import profileImage from "../public/cartoon2.jpg";
-import bg from "../public/bg.jpg";
+import profileImage from "../public/cyberpunk.jpg";
+import bg from "../public/cyberpunk.gif";
 import { useMoralis } from "react-moralis";
+
 function Login() {
   const { authenticate } = useMoralis();
   return (
-    <div className="bg-black relative text-white">
-      <div className="flex flex-col absolute z-50 h-4/6 w-full items-center justify-center space-y-4 ">
+    <div className="bg-black relative font-press text-pink-500">
+      <div className="flex flex-col absolute z-50 h-full w-full items-center justify-center space-y-4 bg-[rgba(0,0,0,0.7)]">
         <Image
           className="object-cover rounded-full"
           src={profileImage}
@@ -15,14 +16,11 @@ function Login() {
           width={200}
         />
         <button
-          className="bg-yellow-500 rounded-lg p-5 font-bold animate-pulse "
+          className="bg-black rounded-lg p-5 font-bold text-xl"
           onClick={authenticate}
         >
           Login with Metaverse
         </button>
-        <h2 className="font-press text-3xl">
-          This is a random text with custom google font family Press Start 2P!
-        </h2>
       </div>
       <div className="w-full h-screen">
         <Image src={bg} alt="" layout="fill" objectFit="cover" />
