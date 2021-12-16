@@ -6,7 +6,7 @@ import { useMoralis } from "react-moralis";
 function Login() {
   const { authenticate } = useMoralis();
   return (
-    <div className="bg-black relative font-press text-pink-500">
+    <div className="bg-black relative font-press text-[#e36493]">
       <div className="flex flex-col absolute z-50 h-full w-full items-center justify-center space-y-4 bg-[rgba(0,0,0,0.7)]">
         <Image
           className="object-cover rounded-full"

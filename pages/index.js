@@ -20,7 +20,7 @@ export default function Home() {
           width={200}
         />
         <button
-          className="bg-black rounded-lg p-5 font-bold text-xl text-pink-500 font-press"
+          className="bg-black rounded-lg p-5 font-bold text-xl text-[#e36493] font-press"
           onClick={logout}
         >
           Logout
