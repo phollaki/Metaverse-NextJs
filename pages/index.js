@@ -1,34 +1,26 @@
 import Login from "../components/Login";
 import { useMoralis } from "react-moralis";
-import bg from "../public/cyberpunk.gif";
-import Image from "next/image";
-import profileImage from "../public/cyberpunk2.jpg";
+import Header from "../components/Header";
+import { useRecoilState } from "recoil";
+import { modalState } from "../atoms/ModalAtom";
+import ChangeUsernameModal from "../components/ChangeUsernameModal";
+import { profileModalState } from "../atoms/ModalAtom";
+import Messages from "../components/Messages";
+import ProfilePictureModal from "../components/ProfilePictureModal";
 
 export default function Home() {
+  const [modal, setModal] = useRecoilState(modalState);
+  const [profilePic, setProfilePic] = useRecoilState(profileModalState);
   const { isAuthenticated, logout } = useMoralis();
 
   if (!isAuthenticated) return <Login />;
 
   return (
-    <div className="h-screen">
-      <div className="flex flex-col absolute z-50 h-full w-full items-center justify-center space-y-4 bg-[rgba(0,0,0,0.7)]">
-        <Image
-          className="object-cover rounded-full"
-          src={profileImage}
-          alt=""
-          height={200}
-          width={200}
-        />
-        <button
-          className="bg-black rounded-lg p-5 font-bold text-xl text-[#e36493] font-press"
-          onClick={logout}
-        >
-          Logout
-        </button>
-      </div>
-      <div className="w-full h-screen">
-        <Image src={bg} alt="" layout="fill" objectFit="cover" />
-      </div>
+    <div className="h-screen overflow-y-scroll bg-metaverse bg-no-repeat bg-cover bg-center flex max-h-screen">
+      <Header />
+      <Messages />
+      {modal && <ChangeUsernameModal />}
+      {profilePic && <ProfilePictureModal />}
     </div>
   );
 }
