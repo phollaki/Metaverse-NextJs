@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="h-screen overflow-y-scroll bg-metaverse bg-no-repeat bg-cover bg-center flex max-h-screen">
       <Head>
-        <title>MetaWorld</title>
+        <title>Metaverse</title>
       </Head>
       <Header />
       <Messages />
