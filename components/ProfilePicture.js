@@ -21,8 +21,8 @@ function ProfilePicture({ src, id }) {
         <Image
           className="rounded-full hover:cursor-pointer hover:opacity-80 "
           src={src}
-          height={100}
-          width={100}
+          height={80}
+          width={80}
           alt=""
           onClick={setAvatar}
         />
