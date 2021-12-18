@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { useMoralis } from "react-moralis";
+import { useRecoilState } from "recoil";
+import { avatarPictureState } from "../atoms/AvatarAtom";
 
 function SendMessage({ endOfMessagesRef }) {
   const { user, Moralis } = useMoralis();
   const [message, setMessage] = useState("");
+  const [avatarPicture, setAvatarPicture] = useRecoilState(avatarPictureState);
 
   const sendMessage = (e) => {
     e.preventDefault();
@@ -17,6 +20,7 @@ function SendMessage({ endOfMessagesRef }) {
         message: message,
         username: user.getUsername(),
         ethAddress: user.get("ethAddress"),
+        profilePic: avatarPicture,
       })
       .then(
         (message) => {

@@ -22,7 +22,9 @@ function Header() {
 
   useEffect(() => {
     if (avatarPicture === 0) {
-      setAvatar(shuffle(avatarNumber).pop());
+      const num = shuffle(avatarNumber).pop();
+      setAvatar(num);
+      setAvatarPicture(num);
     } else {
       setAvatar(avatarPicture);
     }

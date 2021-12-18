@@ -8,7 +8,7 @@ function Message({ message }) {
   const { user } = useMoralis();
   const [avatar, setAvatar] = useRecoilState(avatarState);
   const isUserMessage = message.get("ethAddress") === user.get("ethAddress");
-
+  console.log(`/avatars/avatar${message.get("profilePic")}.png`);
   return (
     <div
       className={`flex items-end space-x-2 relative ${
@@ -27,7 +27,7 @@ function Message({ message }) {
           src={
             isUserMessage
               ? `/avatars/avatar${avatar}.png`
-              : `/avatars/avatar1.png`
+              : `/avatars/avatar${message.get("profilePic")}.png`
           }
           alt=""
         />
