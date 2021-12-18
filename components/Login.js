@@ -16,7 +16,7 @@ function Login() {
           width={200}
         />
         <button
-          className="bg-black rounded-lg p-5 font-bold text-xl transition-all duration-250 hover:shadow-pink-500 hover:shadow-md hover:-translate-y-2 active:-translate-y-1 active:shadow-sm"
+          className="bg-black rounded-lg p-5 font-bold text-sm lg:text-xl transition-all duration-250 hover:shadow-pink-500 hover:shadow-md hover:-translate-y-2 active:-translate-y-1 active:shadow-sm"
           onClick={authenticate}
         >
           Login with Metaverse

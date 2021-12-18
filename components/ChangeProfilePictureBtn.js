@@ -8,7 +8,7 @@ function ChangeProfilePictureBtn({ text }) {
       onClick={() => setProfilePic(true)}
       className="hover:animate-pulse hover:text-pink-400  transition-all duration-200 hover:-translate-y-1 active:translate-y-0 hover:cursor-pointer"
     >
-      <h2>Change Profile Picture</h2>
+      <h2>Change Avatar</h2>
     </div>
   );
 }

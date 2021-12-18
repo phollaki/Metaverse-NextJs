@@ -33,7 +33,7 @@ function SendMessage({ endOfMessagesRef }) {
   };
 
   return (
-    <form className="bg-black opacity-90 px-6 py-8 border-t-2 border-pink-500 flex justify-between">
+    <form className="bg-black opacity-90 px-6 py-8 border-t-2 border-pink-500 flex justify-between text-xs lg:text-base">
       <input
         type="text"
         value={message}

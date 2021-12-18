@@ -29,7 +29,7 @@ function Header() {
   }, [avatarPicture]);
 
   return (
-    <div className="flex flex-col flex-grow-0 h-screen w-[15rem] lg:w-[20rem] items-center justify-between bg-black text-sm lg:text-base text-pink-500 font-press text-center p-5 border-r-2 border-pink-500">
+    <div className="flex flex-col flex-grow-0 h-screen w-[15rem] lg:w-[20rem] items-center justify-between bg-black text-xs lg:text-sm text-pink-500 font-press text-center p-5 border-r-2 border-pink-500">
       <div className="w-full">
         <div className="mt-5 w-32 h-32 lg:w-44 lg:h-44  relative mx-auto border-[0.5rem]  border-pink-500 rounded-full ">
           <Image
