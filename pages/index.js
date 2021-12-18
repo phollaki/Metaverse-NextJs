@@ -7,6 +7,7 @@ import ChangeUsernameModal from "../components/ChangeUsernameModal";
 import { profileModalState } from "../atoms/ModalAtom";
 import Messages from "../components/Messages";
 import ProfilePictureModal from "../components/ProfilePictureModal";
+import Head from "next/head";
 
 export default function Home() {
   const [modal, setModal] = useRecoilState(modalState);
@@ -17,6 +18,9 @@ export default function Home() {
 
   return (
     <div className="h-screen overflow-y-scroll bg-metaverse bg-no-repeat bg-cover bg-center flex max-h-screen">
+      <Head>
+        <title>MetaWorld</title>
+      </Head>
       <Header />
       <Messages />
       {modal && <ChangeUsernameModal />}

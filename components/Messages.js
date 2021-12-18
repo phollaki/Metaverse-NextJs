@@ -39,7 +39,7 @@ function Messages() {
         </div>
         <div
           ref={endOfMessagesRef}
-          className="text-center text-gray-400 my-10 text-xs"
+          className="text-center text-gray-400 my-10 text-[9px]  lg:text-xs"
         >
           <p>You are up to date {user.getUsername()} 🎉</p>
         </div>
