@@ -16,12 +16,12 @@ function profile() {
 
   if (!isAuthenticated) return <Login />;
   return (
-    <div className="h-screen overflow-y-scroll bg-metaverse bg-no-repeat bg-cover bg-center flex max-h-screen">
+    <div className="h-screen overflow-hidden bg-metaverse bg-no-repeat bg-cover bg-center flex max-h-screen">
       <Head>
         <title>Metaverse</title>
       </Head>
       <Header />
-      <ProfileDetails/>
+      <ProfileDetails />
       {modal && <ChangeUsernameModal />}
       {profilePic && <ProfilePictureModal />}
     </div>

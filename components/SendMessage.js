@@ -39,18 +39,18 @@ function SendMessage({ endOfMessagesRef }) {
 
   return (
     <div>
-      <form className="h-full mx-auto w-[50%] rounded-full border-2 py-5 px-10 border-pink-500 flex justify-between text-xs lg:text-base overflow-hidden">
+      <form className="h-full mx-auto w-[50%] rounded-full border-2 py-5 px-10 border-pink-500 flex justify-between text-xs lg:text-sm overflow-hidden">
         <input
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="outline-none bg-transparent text-white placeholder-gray-500 truncate"
+          className="outline-none bg-transparent text-white flex-[0.8] placeholder-gray-500 truncate"
           placeholder={`Enter a Message ${user.getUsername()} 💭`}
         />
         <button
           type="submit"
           onClick={sendMessage}
-          className="font-bold text-pink-500 justify-end"
+          className="font-bold flex-[0.1] text-pink-500 justify-end"
         >
           Send
         </button>

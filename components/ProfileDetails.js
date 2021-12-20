@@ -15,8 +15,8 @@ const containerVariants = {
 };
 
 function ProfileDetails() {
-  const { user } = useMoralis();
-  console.log(user.attributes);
+  const { user, account } = useMoralis();
+  console.log(account);
   return (
     <motion.div
       className="text-white m-auto font-press w-1/2 h-1/2 rounded-3xl p-10 max-h-screen bg-[rgba(0,0,0,0.9)]"
@@ -27,14 +27,19 @@ function ProfileDetails() {
       <h2 className="text-xl tracking-widest text-center border-b-2 border-pink-500 pb-4 ">
         Profile details
       </h2>
-      <div className="w-full h-full flex-col flex-wrap overflow-hidden space-y-5 mt-5">
-        <p className="text-sm">Name:{user.getUsername()}</p>
-        <p className="text-xs lg:text-sm">
-          Eth address: {user.attributes.ethAddress}
+      <div className="w-full h-full flex-col flex-wrap overflow-hidden space-y-8 mt-5 text-xs lg:text-sm">
+        <p className="text-sm">
+          Name: <span className="text-pink-500">{user.getUsername()}</span>
+        </p>
+        <p className="">
+          Eth address:{" "}
+          <span className="text-pink-500">{user.attributes.ethAddress}</span>
         </p>
         <p>
           Created at:{" "}
-          {`${user.attributes.createdAt.getDay()}/${user.attributes.createdAt.getMonth()}/${user.attributes.createdAt.getFullYear()} `}
+          <span className="text-pink-500">
+            {`${user.attributes.createdAt.getDay()}/${user.attributes.createdAt.getMonth()}/${user.attributes.createdAt.getFullYear()} `}
+          </span>
         </p>
       </div>
     </motion.div>
