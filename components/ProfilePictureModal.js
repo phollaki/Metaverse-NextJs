@@ -12,7 +12,7 @@ function ProfilePictureModal() {
 
   return (
     <div
-      className={`text-center p-2  border-2 border-pink-500 absolute top-1/2 left-1/2
+      className={`text-center p-2 border-2 border-pink-500 absolute top-1/2 left-1/2
         transform translate-x-[-50%] translate-y-[-60%] z-30 
       bg-black text-pink-500 font-press lg:p-4 rounded-lg text-xs lg:text-xl ${
         profilePic && "animate-fade-in-up"

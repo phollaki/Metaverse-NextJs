@@ -24,12 +24,12 @@ function Messages() {
   );
 
   return (
-    <div className="text-white font-press flex-col flex-grow  max-h-screen overflow-hidden">
-      <div className="bg-[rgba(0,0,0,0.8)]   overflow-scroll scrollbar-hide h-[90%] pt-16">
+    <div className="text-white font-press flex-col flex-grow max-h-screen grid grid-cols-1 grid-rows-2 p-2 bg-[rgba(0,0,0,0.8)]">
+      <div className=" overflow-scroll scrollbar-hide pt-16 row-span-6">
         <div className="my-5 z-10 absolute top-0 left-1/2">
           <ByMoralis
             variant="dark"
-            style={{ marginLeft: "auto", marginRight: "auto"}}
+            style={{ marginLeft: "auto", marginRight: "auto" }}
           />
         </div>
         <div className="space-y-10 p-4 ">
@@ -45,7 +45,7 @@ function Messages() {
         </div>
       </div>
 
-      <div className="max-w-full ">
+      <div className="h-full bg-gradient-to-b from-[rgba(0,0,0,0.8)] to-black row-span-1">
         <SendMessage endOfMessagesRef={endOfMessagesRef} />
       </div>
     </div>

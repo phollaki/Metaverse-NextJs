@@ -53,9 +53,8 @@ function Header() {
       <div className="space-y-10 -mt-10">
         <ChangeUsername />
         <ChangeProfilePictureBtn />
-        <HeaderBtn text="Profile" />
-        <HeaderBtn text="Friends" />
-        <HeaderBtn text="Buy/Sell Crypto" />
+        <HeaderBtn text="Profile" type="profile" />
+        <HeaderBtn text="Chat" type="/" />
       </div>
       <div>
         <button

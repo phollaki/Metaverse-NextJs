@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useMoralis } from "react-moralis";
 import { useRecoilState } from "recoil";
 import { avatarPictureState } from "../atoms/AvatarAtom";
+import Image from "next/image";
 
 function SendMessage({ endOfMessagesRef }) {
   const { user, Moralis } = useMoralis();
@@ -37,22 +38,24 @@ function SendMessage({ endOfMessagesRef }) {
   };
 
   return (
-    <form className="bg-black opacity-90 px-6 py-8 border-t-2 border-pink-500 flex justify-between text-xs lg:text-base">
-      <input
-        type="text"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        className="outline-none bg-transparent text-white w-full placeholder-gray-500 "
-        placeholder={`Enter a Message ${user.getUsername()} 💭`}
-      />
-      <button
-        type="submit"
-        onClick={sendMessage}
-        className="font-bold text-pink-500 "
-      >
-        Send
-      </button>
-    </form>
+    <div>
+      <form className="h-full mx-auto w-[50%] rounded-full border-2 py-5 px-10 border-pink-500 flex justify-between text-xs lg:text-base overflow-hidden">
+        <input
+          type="text"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          className="outline-none bg-transparent text-white placeholder-gray-500 truncate"
+          placeholder={`Enter a Message ${user.getUsername()} 💭`}
+        />
+        <button
+          type="submit"
+          onClick={sendMessage}
+          className="font-bold text-pink-500 justify-end"
+        >
+          Send
+        </button>
+      </form>
+    </div>
   );
 }
 

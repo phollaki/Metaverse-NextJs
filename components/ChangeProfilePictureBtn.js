@@ -1,15 +1,26 @@
 import { profileModalState } from "../atoms/ModalAtom";
 import { useRecoilState } from "recoil";
 
+import { motion } from "framer-motion";
+
+const btnVariants = {
+  animate: {
+    y: -5,
+  },
+};
+
 function ChangeProfilePictureBtn({ text }) {
   const [profilePic, setProfilePic] = useRecoilState(profileModalState);
+
   return (
-    <div
+    <motion.button
+      variants={btnVariants}
+      whileHover="animate"
       onClick={() => setProfilePic(true)}
-      className="hover:animate-pulse hover:text-pink-400  transition-all duration-200 hover:-translate-y-1 active:translate-y-0 hover:cursor-pointer"
+      className="hover:animate-pulse hover:text-pink-400"
     >
-      <h2>Change Avatar</h2>
-    </div>
+      Change Avatar
+    </motion.button>
   );
 }
 
