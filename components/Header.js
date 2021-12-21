@@ -6,7 +6,7 @@ import ChangeUsername from "./ChangeUsername";
 import HeaderBtn from "../components/HeaderBtn";
 import { avatarState } from "../atoms/AvatarAtom";
 import { useRecoilState } from "recoil";
-import { profileModalState } from "../atoms/ModalAtom";
+import { mobileModalState, profileModalState } from "../atoms/ModalAtom";
 import { avatarPictureState } from "../atoms/AvatarAtom";
 import ChangeProfilePictureBtn from "./ChangeProfilePictureBtn";
 
@@ -20,6 +20,7 @@ function Header() {
   const [avatar, setAvatar] = useRecoilState(avatarState);
   const [profilePic, setProfilePic] = useRecoilState(profileModalState);
   const [avatarPicture, setAvatarPicture] = useRecoilState(avatarPictureState);
+  const [mobileModal, setMobileModal] = useRecoilState(mobileModalState);
 
   useEffect(() => {
     if (avatarPicture === 0) {
@@ -32,9 +33,9 @@ function Header() {
   }, [avatarPicture]);
 
   return (
-    <div className="flex flex-col flex-grow-0 h-screen w-[15rem] lg:w-[20rem] items-center justify-between bg-black text-xs lg:text-sm text-pink-500 font-press text-center p-5 border-r-2 border-pink-500">
+    <div className="flex h-[10rem] md:flex-col md:h-screen  md:w-[15rem] lg:w-[20rem] items-center justify-between bg-gradient-to-b from-black to-[rgba(0,0,0,0.8)] lg:bg-black text-xs md:text-sm text-pink-500 font-press text-center p-5 border-r-2 border-pink-500">
       <div className="w-full">
-        <div className="mt-5 w-32 h-32 lg:w-44 lg:h-44  relative mx-auto border-[0.5rem]  border-pink-500 rounded-full ">
+        <div className="mt-5 w-24 h-24 lg:w-44 lg:h-44  relative mx-auto border-[0.5rem]  border-pink-500 rounded-full ">
           <Image
             layout="fill"
             objectFit="cover"
@@ -44,13 +45,21 @@ function Header() {
             onClick={() => setProfilePic(true)}
           />
         </div>
-        <h1 className="mt-5">
+        <h1 className="md:inline-block hidden mt-5">
           Welcome{" "}
           <span className="text-pink-200 font-bold">{user.getUsername()}</span>{" "}
           to the MetaWorld!
         </h1>
       </div>
-      <div className="space-y-10 -mt-10">
+      <div className="flex md:hidden">
+        <button
+          className="hover:text-pink-400 hover:cursor-pointer hover:animate-pulse"
+          onClick={() => setMobileModal(true)}
+        >
+          Menu
+        </button>
+      </div>
+      <div className="md:space-y-10 -mt-10 hidden md:flex md:flex-col">
         <ChangeUsername />
         <ChangeProfilePictureBtn />
         <HeaderBtn text="Profile" type="profile" />

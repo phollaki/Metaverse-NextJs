@@ -25,11 +25,11 @@ function Messages() {
 
   return (
     <div className="text-white font-press flex-col flex-grow max-h-screen grid grid-cols-1 grid-rows-2 p-2 bg-[rgba(0,0,0,0.8)]">
-      <div className=" overflow-scroll scrollbar-hide pt-16 row-span-6">
+      <div className="overflow-scroll scrollbar-hide pt-16 row-span-6">
         <div className="my-5 z-10 absolute top-0 left-1/2">
           <ByMoralis
             variant="dark"
-            style={{ marginLeft: "auto", marginRight: "auto" }}
+            style={{ marginLeft: "auto", marginRight: "auto", height: "40px" }}
           />
         </div>
         <div className="space-y-10 p-4 ">
@@ -39,7 +39,7 @@ function Messages() {
         </div>
         <div
           ref={endOfMessagesRef}
-          className="text-center text-gray-400 my-10 text-[9px]  lg:text-xs"
+          className="text-center text-gray-400 my-10 text-[9px] lg:text-xs"
         >
           <p>You are up to date {user.getUsername()} 🎉</p>
         </div>
