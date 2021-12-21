@@ -19,7 +19,7 @@ function ProfileDetails() {
   console.log(account);
   return (
     <motion.div
-      className="text-white m-auto font-press w-1/2 h-1/2 rounded-3xl p-10 max-h-screen bg-[rgba(0,0,0,0.9)]"
+      className="text-white m-auto md:mr-56 font-press w-1/2 h-1/2 rounded-3xl p-10 max-h-screen bg-[rgba(0,0,0,0.9)]"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

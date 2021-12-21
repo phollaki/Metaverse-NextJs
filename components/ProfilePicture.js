@@ -21,18 +21,28 @@ function ProfilePicture({ src, id }) {
         <Image
           className="rounded-full hover:cursor-pointer hover:opacity-80 "
           src={src}
-          height={80}
-          width={80}
+          height={70}
+          width={70}
           alt=""
           onClick={setAvatar}
         />
       </div>
-      <div className="m-2 inline-block lg:hidden">
+      <div className="m-2 hidden md:inline-block lg:hidden">
         <Image
           className="rounded-full hover:cursor-pointer hover:opacity-80 "
           src={src}
           height={50}
           width={50}
+          alt=""
+          onClick={setAvatar}
+        />
+      </div>
+      <div className="m-2 inline-block md:hidden">
+        <Image
+          className="rounded-full hover:cursor-pointer hover:opacity-80 "
+          src={src}
+          height={25}
+          width={25}
           alt=""
           onClick={setAvatar}
         />

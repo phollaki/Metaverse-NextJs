@@ -24,9 +24,9 @@ function Messages() {
   );
 
   return (
-    <div className="text-white font-press flex-col flex-grow max-h-screen grid grid-cols-1 grid-rows-2 p-2 bg-[rgba(0,0,0,0.8)]">
-      <div className="overflow-scroll scrollbar-hide pt-16 row-span-6">
-        <div className="my-5 z-10 absolute top-0 left-1/2">
+    <div className="text-white font-press flex-col flex-grow max-h-screen grid grid-cols-1 grid-rows-2 p-2 pb-10 bg-[rgba(0,0,0,0.8)]">
+      <div className="overflow-y-scroll scrollbar-hide pt-16 row-span-6 ">
+        <div className="my-5 z-10 absolute md:top-0 left-1/2 translate-x-[-50%] md:translate-x-0">
           <ByMoralis
             variant="dark"
             style={{ marginLeft: "auto", marginRight: "auto", height: "40px" }}
@@ -39,13 +39,13 @@ function Messages() {
         </div>
         <div
           ref={endOfMessagesRef}
-          className="text-center text-gray-400 my-10 text-[9px] lg:text-xs"
+          className="text-center text-gray-400 my-10 text-[9px] md:ml-64 lg:text-xs"
         >
           <p>You are up to date {user.getUsername()} 🎉</p>
         </div>
       </div>
 
-      <div className="h-full bg-gradient-to-b from-[rgba(0,0,0,0.8)] to-black row-span-1">
+      <div className="fixed bottom-2 md:left-40 w-full  bg-gradient-to-b from-[rgba(0,0,0,0.8)] to-black row-span-1">
         <SendMessage endOfMessagesRef={endOfMessagesRef} />
       </div>
     </div>

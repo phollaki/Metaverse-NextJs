@@ -33,9 +33,9 @@ function Header() {
   }, [avatarPicture]);
 
   return (
-    <div className="flex h-[10rem] md:flex-col md:h-screen  md:w-[15rem] lg:w-[20rem] items-center justify-between bg-gradient-to-b from-black to-[rgba(0,0,0,0.8)] lg:bg-black text-xs md:text-sm text-pink-500 font-press text-center p-5 border-r-2 border-pink-500">
-      <div className="w-full">
-        <div className="mt-5 w-24 h-24 lg:w-44 lg:h-44  relative mx-auto border-[0.5rem]  border-pink-500 rounded-full ">
+    <div className="fixed top-0 w-full flex h-[5rem] md:flex-col md:h-screen  md:w-[15rem] lg:w-[20rem] items-center justify-between bg-gradient-to-b from-black to-[rgba(0,0,0,0.8)] lg:bg-black text-xs md:text-sm text-pink-500 font-press text-center px-10 md:p-5 md:border-r-2 border-pink-500 z-20">
+      <div className="md:w-full">
+        <div className="mt-5 w-16 h-16 lg:w-44 lg:h-44  relative mx-auto border-[0.5rem]  border-pink-500 rounded-full ">
           <Image
             layout="fill"
             objectFit="cover"
@@ -53,7 +53,7 @@ function Header() {
       </div>
       <div className="flex md:hidden">
         <button
-          className="hover:text-pink-400 hover:cursor-pointer hover:animate-pulse"
+          className="hover:text-pink-400 hover:cursor-pointer hover:animate-pulse font-bold"
           onClick={() => setMobileModal(true)}
         >
           Menu

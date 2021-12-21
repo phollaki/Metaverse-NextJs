@@ -38,7 +38,7 @@ function SendMessage({ endOfMessagesRef }) {
   };
 
   return (
-    <form className="h-full mx-auto w-[50%] rounded-full border-2 py-5 px-10 border-pink-500 flex justify-between text-xs lg:text-sm overflow-hidden">
+    <form className="h-full md:mx-auto w-full md:w-[50%] rounded-full border-2 py-5 px-10 border-pink-500 flex justify-between text-xs lg:text-sm overflow-hidden">
       <input
         type="text"
         value={message}

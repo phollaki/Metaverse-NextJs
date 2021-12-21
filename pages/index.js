@@ -20,7 +20,7 @@ export default function Home() {
   if (!isAuthenticated) return <Login />;
 
   return (
-    <div className="h-screen w-full overflow-hidden bg-metaverse bg-no-repeat bg-cover bg-center flex flex-col md:flex-row max-h-screen">
+    <div className="h-screen w-full overflow-hidden bg-metaverse bg-no-repeat bg-cover bg-center flex max-h-screen">
       <Head>
         <title>Metaverse</title>
       </Head>
