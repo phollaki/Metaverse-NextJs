@@ -24,7 +24,7 @@ function Messages() {
   );
 
   return (
-    <div className="text-white font-press flex-col flex-grow max-h-screen grid grid-cols-1 grid-rows-2 p-2 pb-10 bg-[rgba(0,0,0,0.8)]">
+    <div className="text-white font-press flex-col flex-grow max-h-screen pl-80 grid grid-cols-1 grid-rows-2 p-2 pb-10 bg-[rgba(0,0,0,0.8)]">
       <div className="overflow-y-scroll scrollbar-hide pt-16 row-span-6 ">
         <div className="my-5 z-10 absolute md:top-0 left-1/2 translate-x-[-50%] md:translate-x-0">
           <ByMoralis

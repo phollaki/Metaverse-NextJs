@@ -1,4 +1,3 @@
-import { moralis } from "moralis";
 import { useMoralis } from "react-moralis";
 import { motion } from "framer-motion";
 
